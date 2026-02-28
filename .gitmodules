@@ -1,3 +1,6 @@
 [submodule "tamper-resistance"]
 	path = tamper-resistance
 	url = https://github.com/rishub-tamirisa/tamper-resistance.git
+[submodule "Honmun"]
+	path = Honmun
+	url = https://github.com/sma1-rmarud/Honmun.git
