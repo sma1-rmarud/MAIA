@@ -79,9 +79,9 @@ setup_honmun() {
     
     create_venv "$venv_path"
     
-    # PyTorch 2.6.0 + CUDA 12.4
-    echo -e "${BLUE}🔥 PyTorch 2.6.0 (CUDA 12.4) 설치...${NC}"
-    pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+    # PyTorch 2.10.0 + CUDA 12.8 (B200 sm_100 지원)
+    echo -e "${BLUE}🔥 PyTorch 2.10.0 (CUDA 12.8) 설치...${NC}"
+    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
     
     # Honmun 설치
     if [ -d "$SCRIPT_DIR/Honmun" ]; then
@@ -112,7 +112,7 @@ show_menu() {
     echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     echo ""
     echo "  1) tamper-resistance  (torch==2.4)"
-    echo "  2) Honmun             (torch==2.6.0+cu124)"
+    echo "  2) Honmun             (torch==2.10.0+cu128, B200 지원)"
     echo "  3) 모두 설치          (별도 venv로 분리)"
     echo "  q) 종료"
     echo ""
